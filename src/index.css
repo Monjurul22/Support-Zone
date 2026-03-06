@@ -5,6 +5,9 @@
   --font-display: "Poppins", ui-sans-serif, system-ui, -apple-system, sans-serif;
 }
 
+/* ✅ Tailwind v4: dark mode class strategy */
+@variant dark (&:where(.dark, .dark *));
+
 html {
   scroll-behavior: smooth;
 }
@@ -27,3 +30,4 @@ body {
 ::-webkit-scrollbar-thumb:hover {
   background: #64748b;
 }
+
