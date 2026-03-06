@@ -29,19 +29,17 @@ const Banner = ({ totalTickets, inProgressCount, resolvedCount }) => {
   return (
     <section className="relative overflow-hidden">
       {/* Gradient background */}
-      <div className="absolute inset-0 bg-linear-to-br from-indigo-600 via-purple-600 to-pink-500" />
+      <div className="absolute inset-0 bg-linear-to-br from-indigo-600 via-purple-600 to-pink-500 dark:from-[#0f0c29] dark:via-[#302b63] dark:to-[#24243e] transition-colors duration-300" />
 
       {/* Decorative blobs */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
         <div className="absolute -top-20 -left-20 w-80 h-80 bg-white/10 rounded-full blur-3xl" />
         <div className="absolute top-1/2 -right-20 w-96 h-96 bg-purple-400/15 rounded-full blur-3xl" />
         <div className="absolute -bottom-10 left-1/3 w-72 h-72 bg-pink-400/10 rounded-full blur-3xl" />
-        {/* Dot grid overlay */}
         <div
           className="absolute inset-0 opacity-[0.04]"
           style={{
-            backgroundImage:
-              "radial-gradient(circle, white 1px, transparent 1px)",
+            backgroundImage: "radial-gradient(circle, white 1px, transparent 1px)",
             backgroundSize: "28px 28px",
           }}
         />
@@ -79,9 +77,7 @@ const Banner = ({ totalTickets, inProgressCount, resolvedCount }) => {
               <p className="text-3xl sm:text-4xl font-display font-bold text-white">
                 {s.value}
               </p>
-              <p className="text-indigo-200 text-sm mt-1 font-medium">
-                {s.label}
-              </p>
+              <p className="text-indigo-200 text-sm mt-1 font-medium">{s.label}</p>
             </div>
           ))}
         </div>
@@ -95,9 +91,10 @@ const Banner = ({ totalTickets, inProgressCount, resolvedCount }) => {
           className="w-full h-auto block"
           preserveAspectRatio="none"
         >
+          {/* Light mode fill */}
           <path
             d="M0,40 C360,100 1080,0 1440,60 L1440,100 L0,100Z"
-            fill="#f8fafc"
+            className="fill-slate-50 dark:fill-slate-900"
           />
         </svg>
       </div>
